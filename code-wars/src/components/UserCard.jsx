@@ -1,6 +1,7 @@
 import React from "react";
 
-function DisplayUser({ user }) {
+function UserCard({ user }) {
+  console.log(user.ranks.overall.color);
   return (
     <div
       className={
@@ -10,13 +11,12 @@ function DisplayUser({ user }) {
       }
     >
       <ul>
-        {console.log("bg-" + user.ranks.overall.color + "-500")}
-        <li className="text-2xl">{user.username.toUpperCase()}</li>
+        <li className="text-2xl">{user.username}</li>
         <li>{user.ranks.overall.name}</li>
         <li>Clan: {user.clan}</li>
         <li>Honor: {user.honor} points</li>
-        {/* <li>Rank: {user.ranks.overall.rank}</li> */}
-        {/* <li>Color: {user.ranks.overall.color}</li> */}
+        {/* <li>Rank: {user.ranks.overall.rank}</li>
+        <li>Color: {user.ranks.overall.color}</li> */}
         <li>Score: {user.ranks.overall.score}</li>
         <li>Challenges completed: {user.codeChallenges.totalCompleted}</li>
       </ul>
@@ -24,4 +24,4 @@ function DisplayUser({ user }) {
   );
 }
 
-export default DisplayUser;
+export default UserCard;
