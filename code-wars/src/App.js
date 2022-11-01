@@ -15,6 +15,7 @@ function App() {
     "https://www.codewars.com/api/v1/users/Antoine64160",
     "https://www.codewars.com/api/v1/users/warasil",
   ];
+
   return (
     <div>
       {users.map((user) => (
