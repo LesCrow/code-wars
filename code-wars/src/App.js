@@ -4,6 +4,8 @@ import "./App.css";
 
 import UserCard from "./components/UserCard";
 import users from "./constants/users";
+import Footer from "./Components/Footer";
+import Header from "./Components/Header";
 
 function App() {
   const [data, setData] = useState([]);
@@ -30,11 +32,13 @@ function App() {
   return (
     <div>
       <div className="h-full bg-gradient-to-r from-black via- to-red-500">
+        <Header />
         {data
           .sort((a, b) => b.honor - a.honor)
           .map((user, index) => (
             <UserCard index={index} key={user.id} user={user} />
           ))}
+        <Footer />
       </div>
     </div>
   );
