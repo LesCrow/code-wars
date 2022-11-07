@@ -14,7 +14,7 @@ function UserCard({ user, index }) {
     >
       <div
         className={
-          "bg-white w-1/2 m-auto mt-5 mb-5 flex justify-between item text-left shadow-xl rounded-lg "
+          "bg-white w-1/2 m-auto mt-5 mb-5 flex justify-between item text-left rounded-3xl shadow-[inset_-6px_6px_#b5b5b3]"
         }
       >
         {index + 1 === 1 && (
@@ -43,7 +43,7 @@ function UserCard({ user, index }) {
         </a>
         <div
           style={{ backgroundColor: user.ranks.overall.color }}
-          className={"border h-auto w-6 ml-5"}
+          className={"border h-auto w-6 ml-5 rounded-r-3xl"}
         ></div>
       </div>
     </motion.div>
