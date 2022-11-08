@@ -47,6 +47,10 @@ const users = [
     index: 12,
     userName: "SebastienMOULIN",
   },
+  {
+    index: 1,
+    userName: "XavierCoulon",
+  },
 ];
 
 export default users;
