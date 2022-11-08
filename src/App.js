@@ -34,7 +34,7 @@ function App() {
       <div className="h-full bg-gradient-to-r from-black via- to-red-500">
         <Header />
         {data
-          .sort((a, b) => b.honor - a.honor)
+          .sort((a, b) => b.ranks.overall.score - a.ranks.overall.score)
           .map((user, index) => (
             <UserCard index={index} key={user.id} user={user} />
           ))}
