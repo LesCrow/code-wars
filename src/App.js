@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import "./App.css";
-
 import UserCard from "./Components/UserCard";
 import users from "./constants/users";
 
@@ -25,7 +24,8 @@ function App() {
 
   console.log(data);
 
-  if (data.length < 1) return <div>Loading ...</div>;
+  if (data.length < 1)
+    return <div className="w-full h-screen text-center">loading...</div>;
 
   return (
     <div>
