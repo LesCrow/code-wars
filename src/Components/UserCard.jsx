@@ -14,7 +14,7 @@ function UserCard({ user, index }) {
     >
       <div
         className={
-          "bg-white w-1/2 m-auto mt-5 mb-5 flex justify-center  text-left shadow-xl rounded-lg "
+          "w-1/2 m-auto mt-5 flex justify-center  text-left shadow-xl h-full bg-red-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 border border-gray-00"
         }
       >
         {index + 1 === 1 && (
@@ -40,7 +40,9 @@ function UserCard({ user, index }) {
         </a>
         <div
           style={{ backgroundColor: user.ranks.overall.color }}
-          className={"border h-auto w-6 ml-5"}
+          className={
+            "border h-auto w-6 ml-5 rounded-md bg-clip-padding shadow-xl backdrop-filter backdrop-blur-sm bg-opacity-30"
+          }
         ></div>
       </div>
     </motion.div>
