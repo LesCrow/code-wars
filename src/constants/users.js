@@ -39,7 +39,14 @@ const users = [
     index: 10,
     userName: "warasil",
   },
-  { index: 11, userName: "Jidayyy" },
+  {
+    index: 11,
+    userName: "Jidayyy",
+  },
+  {
+    index: 12,
+    userName: "XavierCoulon",
+  },
 ];
 
 export default users;
