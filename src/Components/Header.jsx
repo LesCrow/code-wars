@@ -5,11 +5,13 @@ import logo6 from "../Images/codewars2.png";
 function Header() {
   return (
     <div className="w-100 h-20 bg-pink flex justify-center items-center p-5  ">
-      <img
-        className=" w-28 h-10 flex justify-center items-center"
-        src={logo}
-        alt="Logo de l'entreprise"
-      />
+      <a href="https://www.wildcodeschool.com/fr-FR">
+        <img
+          className=" w-28 h-10 flex justify-center items-center"
+          src={logo}
+          alt="Logo de l'entreprise"
+        />
+      </a>
       <p className="text-4xl text-white ml-5 mr-5">X</p>
       <div className=" w-36 h-14  flex ml-4 justify-center items-center">
         <a href="https://www.codewars.com/">

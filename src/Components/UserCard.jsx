@@ -18,7 +18,7 @@ function UserCard({ user, index }) {
         }
       >
         {index + 1 === 1 && (
-          <div className="w-10 h-10 text-4xl text-[#ffd700]">{index + 1}</div>
+          <div className="w-10 h-10  text-4xl text-[#ffd700]">{index + 1}</div>
         )}
         {index + 1 === 2 && (
           <div className="w-10 h-10 text-4xl text-[#C0C0C0]">{index + 1}</div>
@@ -28,14 +28,16 @@ function UserCard({ user, index }) {
         )}
         {index + 1 > 3 && <div className="w-10 h-10 text-3xl">{index + 1}</div>}
 
-        <ul>
-          <li className="text-2xl">{user.username}</li>
-          <li>{user.ranks.overall.name}</li>
-          <li>Clan : {user.clan}</li>
-          <li>Score : {user.ranks.overall.score}</li>
-          <li>Honor : {user.honor} points</li>
-          <li>Challenges completed : {user.codeChallenges.totalCompleted}</li>
-        </ul>
+        <a href={`https://www.codewars.com/users/${user.username}`}>
+          <ul>
+            <li className="text-2xl">{user.username}</li>
+            <li>{user.ranks.overall.name}</li>
+            <li>Clan : {user.clan}</li>
+            <li>Score : {user.ranks.overall.score}</li>
+            <li>Honor : {user.honor} points</li>
+            <li>Challenges completed : {user.codeChallenges.totalCompleted}</li>
+          </ul>
+        </a>
         <div
           style={{ backgroundColor: user.ranks.overall.color }}
           className={"border h-auto w-6 ml-5"}
