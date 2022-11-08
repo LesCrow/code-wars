@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import "./App.css";
 
-import UserCard from "./components/UserCard";
+import UserCard from "./Components/UserCard";
 import users from "./constants/users";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
