@@ -7,7 +7,7 @@ import { loadFull } from "tsparticles";
 
 function App() {
   const particlesInit = useCallback(async (engine) => {
-    console.log(engine);
+    // console.log(engine);
     // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
     // starting from v2 you can add only the features you need reducing the bundle size
@@ -39,13 +39,9 @@ function App() {
               value: "#000000",
             },
           },
-          fpsLimit: 120,
+          fpsLimit: 15,
           interactivity: {
             events: {
-              onClick: {
-                enable: true,
-                mode: "push",
-              },
               onHover: {
                 enable: true,
                 mode: "repulse",
@@ -58,7 +54,7 @@ function App() {
               },
               repulse: {
                 distance: 200,
-                duration: 0.8,
+                duration: 1,
               },
             },
           },
@@ -74,7 +70,7 @@ function App() {
               width: 1,
             },
             collisions: {
-              enable: true,
+              enable: false,
             },
             move: {
               directions: "none",
@@ -83,13 +79,13 @@ function App() {
                 default: "bounce",
               },
               random: false,
-              speed: 3,
+              speed: 1,
               straight: false,
             },
             number: {
               density: {
                 enable: true,
-                area: 800,
+                area: 1000,
               },
               value: 80,
             },
@@ -100,7 +96,7 @@ function App() {
               type: "circle",
             },
             size: {
-              value: { min: 1, max: 5 },
+              value: { min: 1, max: 3 },
             },
           },
           detectRetina: true,

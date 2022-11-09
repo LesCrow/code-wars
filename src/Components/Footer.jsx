@@ -12,11 +12,11 @@ import logo50 from "../Images/logo-fb-noir.png";
 
 function Footer() {
   return (
-    <div className="bg-pink w-full h-32 flex flex-col justify-center md:flex md:flex-row md:justify-between p-5">
+    <div className="bg-[#b1361e] w-full h-32 flex flex-col justify-center md:flex md:flex-row md:justify-between p-5">
       <div className="text-white text-sm flex flex-col justify-center items-center mb-2 md:items-start">
         <p>Adresse</p>
         <p>27 Route de Pitoys</p>
-        <p>64100 Anglet</p>
+        <p>64600 Anglet</p>
         <p>biarritz@wildcodeschool.com</p>
       </div>
       <div className="flex flex-row justify-center items-center">
