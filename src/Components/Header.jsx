@@ -4,7 +4,7 @@ import logo6 from "../Images/codewars2.png";
 
 function Header() {
   return (
-    <div className="w-100 h-20 bg-pink flex justify-center items-center p-5  ">
+    <div className="w-100 h-20 bg-[#b1361e] flex justify-center items-center p-5  ">
       <a href="https://www.wildcodeschool.com/fr-FR">
         <img
           className=" w-28 h-10 flex justify-center items-center"

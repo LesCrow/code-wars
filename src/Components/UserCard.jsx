@@ -1,20 +1,12 @@
-import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import React from "react";
 
 function UserCard({ user, index }) {
-  const ref = useRef(null);
-  const inView = useInView(ref);
-
+  console.log("render");
   return (
-    <motion.div
-      ref={ref}
-      transition={{ delay: 0 + index * 0.05 }}
-      animate={{ opacity: 1, scale: inView ? 1 : 0 }}
-      initial={{ opacity: 0, scale: 0 }}
-    >
+    <div>
       <div
         className={
-          "bg-white w-1/2 m-auto mt-5 mb-5 flex justify-center  text-left shadow-xl rounded-lg "
+          "w-1/2 m-auto text-white my-5 flex justify-center  text-left shadow-xl h-full bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-00"
         }
       >
         {index + 1 === 1 && (
@@ -40,10 +32,10 @@ function UserCard({ user, index }) {
         </a>
         <div
           style={{ backgroundColor: user.ranks.overall.color }}
-          className={"border h-auto w-6 ml-5"}
+          className="border h-auto w-6 ml-5 rounded-md bg-clip-padding shadow-xl backdrop-filter backdrop-blur-sm bg-opacity-30"
         ></div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
