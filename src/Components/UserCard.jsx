@@ -6,17 +6,23 @@ function UserCard({ user, index }) {
     <div>
       <div
         className={
-          "w-1/2 m-auto text-white my-5 flex justify-center  text-left shadow-xl h-full bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-00"
+          index === 0
+            ? "w-1/2 m-auto text-white my-5 flex justify-center  text-left shadow-xl h-full bg-yellow-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-70 border border-gray-00"
+            : index === 1
+            ? "w-1/2 m-auto text-white my-5 flex justify-center  text-left shadow-xl h-full bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-70 border border-gray-00"
+            : index === 2
+            ? "w-1/2 m-auto text-white my-5 flex justify-center  text-left shadow-xl h-full bg-amber-700 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-70 border border-grey-00"
+            : "w-1/2 m-auto text-white my-5 flex justify-center  text-left shadow-xl h-full bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-00"
         }
       >
         {index + 1 === 1 && (
-          <div className="w-10 h-10  text-4xl text-[#ffd700]">{index + 1}</div>
+          <div className="w-10 h-10  text-4xl text-[#ffd700]"></div>
         )}
         {index + 1 === 2 && (
-          <div className="w-10 h-10 text-4xl text-[#C0C0C0]">{index + 1}</div>
+          <div className="w-10 h-10 text-4xl text-[#C0C0C0]"></div>
         )}
         {index + 1 === 3 && (
-          <div className="w-10 h-10 text-4xl text-[#614e1a]">{index + 1}</div>
+          <div className="w-10 h-10 text-4xl text-[#614e1a]"></div>
         )}
         {index + 1 > 3 && <div className="w-10 h-10 text-3xl">{index + 1}</div>}
 
