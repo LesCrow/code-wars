@@ -34,9 +34,14 @@ function Table({ user, index }) {
         .map((user, index) => (
           <tr>
             <th className="text-white">{index + 1}</th>
-            <a href={`https://www.codewars.com/users/${user.username}`}>
-              <th className="text-white">{user.username}</th>
-            </a>
+
+            <th className="text-white">
+              {" "}
+              <a href={`https://www.codewars.com/users/${user.username}`}>
+                {user.username}{" "}
+              </a>
+            </th>
+
             <th className="text-white">{user.ranks.overall.score}</th>
             <th className="text-white">{user.ranks.overall.name}</th>
             <th className="text-white">{user.honor}</th>
