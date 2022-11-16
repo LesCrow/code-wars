@@ -1,6 +1,6 @@
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
-import MainContent from "./Components/MainContent";
+import MainContent from "./pages/MainContent";
 import Particles from "react-tsparticles";
 import { useCallback } from "react";
 import { loadFull } from "tsparticles";

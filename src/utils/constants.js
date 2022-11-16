@@ -1,4 +1,4 @@
-const users = [
+export const users = [
   {
     index: 1,
     userName: "Lescrow",
@@ -49,4 +49,11 @@ const users = [
   },
 ];
 
-export default users;
+export const categories = [
+  "RANK",
+  "NAME",
+  "SCORE",
+  "KYU",
+  "HONOR",
+  "CHALLENGES COMPLETED",
+];
