@@ -21,7 +21,20 @@ function Table({ user, index }) {
     getDataFromAllUsers();
   }, []);
 
-  if (data.length < 1) return <div>Loading ...</div>;
+  if (data.length < 1) return <div>Loading...</div>;
+
+  // background gold, silver and bronze for the first, second and third place
+  const color = (i) => {
+    if (i === 1) {
+      return "bg-[#D79A10]";
+    }
+    if (i === 2) {
+      return "bg-[#C0C0C0]";
+    }
+    if (i === 3) {
+      return "bg-[#614e1a]";
+    }
+  };
   return (
     <table className=" border w-[80%] m-auto backdrop-blur-md border-gray-500 ">
       <tr className="border border-gray-500 ">
@@ -32,8 +45,8 @@ function Table({ user, index }) {
       {data
         .sort((a, b) => b.ranks.overall.score - a.ranks.overall.score)
         .map((user, index) => (
-          <tr>
-            <th className="text-white ">{index + 1}</th>
+          <tr className={color(index + 1)}>
+            <th className="text-white  ">{index >= 3 && index + 1}</th>
 
             <th className="text-white">
               {" "}
