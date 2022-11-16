@@ -23,8 +23,8 @@ function Table({ user, index }) {
 
   if (data.length < 1) return <div>Loading ...</div>;
   return (
-    <table className="border w-[80%] m-auto">
-      <tr className="border">
+    <table className=" border w-[80%] m-auto backdrop-blur-md border-gray-500 ">
+      <tr className="border border-gray-500 ">
         {categories.map((category) => (
           <th className="text-white">{category}</th>
         ))}
@@ -33,7 +33,7 @@ function Table({ user, index }) {
         .sort((a, b) => b.ranks.overall.score - a.ranks.overall.score)
         .map((user, index) => (
           <tr>
-            <th className="text-white">{index + 1}</th>
+            <th className="text-white ">{index + 1}</th>
 
             <th className="text-white">
               {" "}
