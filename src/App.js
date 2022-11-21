@@ -19,7 +19,7 @@ function App() {
   }, []);
 
   return (
-    <div className="relative z-10">
+    <div className="relative z-10 h-[100vw]">
       <div className="relative z-10">
         {" "}
         <Header />
