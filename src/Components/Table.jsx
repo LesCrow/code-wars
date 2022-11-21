@@ -36,7 +36,7 @@ function Table({ user, index }) {
     }
   };
   return (
-    <table className=" border w-[80%] m-auto backdrop-blur-md border-gray-500 ">
+    <table className=" border w-[80%] m-auto md:m-auto  backdrop-blur-md border-gray-500 ">
       <tr className="border border-gray-500 ">
         {categories.map((category) => (
           <th className="text-white">{category}</th>
@@ -46,7 +46,7 @@ function Table({ user, index }) {
         .sort((a, b) => b.ranks.overall.score - a.ranks.overall.score)
         .map((user, index) => (
           <tr className={color(index + 1)}>
-            <th className="text-white  ">{index >= 3 && index + 1}</th>
+            <th className={"text-white  "}>{index >= 3 && index + 1}</th>
 
             <th className="text-white">
               {" "}
