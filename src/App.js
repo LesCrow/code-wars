@@ -19,8 +19,8 @@ function App() {
   }, []);
 
   return (
-    <div className="relative z-10">
-      <div className="relative z-10">
+    <div className="relative z-10 h-[100vh]">
+      <div className="relative z-10 h-full flex flex-col justify-between">
         {" "}
         <Header />
         <MainContent />
