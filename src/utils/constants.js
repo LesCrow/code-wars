@@ -47,6 +47,10 @@ export const users = [
     index: 12,
     userName: "XavierCoulon",
   },
+  {
+    index: 13,
+    userName: "SebastienMOULIN",
+  },
 ];
 
 export const categories = [
