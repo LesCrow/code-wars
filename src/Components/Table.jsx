@@ -36,29 +36,52 @@ function Table({ user, index }) {
     }
   };
   return (
-    <table className=" border w-[80%] m-auto md:m-auto  backdrop-blur-md border-gray-500 ">
+    <table className=" border w-[80%] m-auto md:m-auto  backdrop-blur-md border-gray-500 opacity-80 ">
       <tr className="border border-gray-500 ">
         {categories.map((category) => (
-          <th className="text-white">{category}</th>
+          <th className="text-white p-2">{category}</th>
         ))}
       </tr>
       {data
         .sort((a, b) => b.ranks.overall.score - a.ranks.overall.score)
         .map((user, index) => (
           <tr className={color(index + 1)}>
-            <th className={"text-white  "}>{index >= 3 && index + 1}</th>
+            <th
+              className={`${index <= 2 ? "text-black" : "text-white"} text-xl`}
+            >
+              {index + 1}
+            </th>
 
-            <th className="text-white">
+            <th className="text-white p-2">
               {" "}
-              <a href={`https://www.codewars.com/users/${user.username}`}>
+              <a
+                href={`https://www.codewars.com/users/${user.username}`}
+                className={`${index <= 2 ? "text-black" : ""} text-xl`}
+              >
                 {user.username}{" "}
               </a>
             </th>
 
-            <th className="text-white">{user.ranks.overall.score}</th>
-            <th className="text-white">{user.ranks.overall.name}</th>
-            <th className="text-white">{user.honor}</th>
-            <th className="text-white">{user.codeChallenges.totalCompleted}</th>
+            <th
+              className={`${index <= 2 ? "text-black" : "text-white"} text-xl`}
+            >
+              {user.ranks.overall.score}
+            </th>
+            <th
+              className={`${index <= 2 ? "text-black" : "text-white"} text-xl`}
+            >
+              {user.ranks.overall.name}
+            </th>
+            <th
+              className={`${index <= 2 ? "text-black" : "text-white"} text-xl`}
+            >
+              {user.honor}
+            </th>
+            <th
+              className={`${index <= 2 ? "text-black" : "text-white"} text-xl`}
+            >
+              {user.codeChallenges.totalCompleted}
+            </th>
           </tr>
         ))}
     </table>
